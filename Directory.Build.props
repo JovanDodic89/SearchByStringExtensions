@@ -1,7 +1,6 @@
 <Project>
   <PropertyGroup>
     <VersionPrefix>1.0.2</VersionPrefix>
-    <VersionSuffix>$([System.DateTime]::Now.ToString("byyyyMMddHHmm"))</VersionSuffix>
     <Authors>Jovan Dodic</Authors>
     <Description>Quarable extensions</Description>
   </PropertyGroup>
