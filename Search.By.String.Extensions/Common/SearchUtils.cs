@@ -274,7 +274,7 @@ namespace Search.By.String.Extensions.Common
             {
                 if (comparison != "=" && comparison != "!=")
                 {
-                    throw new RequestNotValidException($"Operator '{comparison}' not allowed for property '{propertyInfo.Name}'. Allowed operator: =,!=.");
+                    throw new OperatorNotValidException(comparison, propertyInfo.Name, "=","!=");
                 }
 
                 var method = typeof(Enum).GetMethods().Where(x => x.Name == "HasFlag").FirstOrDefault();

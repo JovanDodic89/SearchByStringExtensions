@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Search.By.String.Extensions.Exceptions
+﻿namespace Search.By.String.Extensions.Exceptions
 {
     public class OperatorNotValidException : Exception
     {
-
+        public OperatorNotValidException(string comparison, string propertyName, params string[] allowedOperatos) 
+            :base($"Operator '{comparison}' not allowed for property '{propertyName}'. Allowed operator: {string.Join(",", allowedOperatos)}")
+        { 
+        }
     }
 }
