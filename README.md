@@ -85,9 +85,9 @@ var result = movies.AsQueryable()
                    .ToList();
 ```
 
-# What is it ready for?(#complex)
+# What is it ready for?
 
-Lets look at this complex definition of ```searchString```
+This is example of complex usage of ```searchString```
 ```c#
 var result = movies.AsQueryable()
                    .Where("(ReleaseYear>1994orGenres.Name=Action)and(Id>3or(Title=MatrixandReleaseYear=1999))")
